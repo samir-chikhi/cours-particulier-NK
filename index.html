@@ -83,7 +83,7 @@
           {
             "@type": "Offer",
             "itemOffered": {"@type": "Service", "name": "Cours de maths à l'heure"},
-            "price": "12",
+            "price": "17",
             "priceCurrency": "EUR",
             "description": "Cours individuel d'une heure pour collégien"
           },
@@ -133,7 +133,7 @@
           "name": "Quel est le tarif des cours particuliers de maths à Montauban ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les cours sont à 12 €/h. Un pack de 10 heures est disponible à 100 €. Le premier échange est gratuit."
+            "text": "Les cours sont à 17 €/h. Un pack de 10 heures est disponible à 170 €. Le premier échange est gratuit."
           }
         },
         {
@@ -221,71 +221,78 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(26,39,68,0.97);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 0 2.5rem;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 68px;
     transition: box-shadow 0.3s;
+    overflow: visible;
   }
-  nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.25); }
+  nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.3); }
+
   .nav-logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     text-decoration: none;
     flex-shrink: 0;
+    padding: 0.25rem 0;
   }
   .nav-logo img {
-    height: 40px;
-    width: 40px;
+    height: 42px;
+    width: 42px;
     border-radius: 10px;
     display: block;
     object-fit: cover;
+    flex-shrink: 0;
   }
-  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.25; }
   .nav-logo-name {
     font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
-    color: white;
+    font-weight: 700;
+    color: #FFFFFF;
     letter-spacing: -0.01em;
   }
   .nav-logo-sub {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     font-family: 'DM Sans', sans-serif;
     color: var(--teal-light);
-    font-weight: 400;
-    letter-spacing: 0.06em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
-  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
   .nav-links a {
     text-decoration: none;
-    color: rgba(255,255,255,0.65);
-    font-size: 0.85rem;
-    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.875rem;
+    font-weight: 500;
     transition: color 0.2s;
-    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
-  .nav-links a:hover { color: white; }
+  .nav-links a:hover { color: var(--teal-light); }
+
   .nav-cta {
     background: var(--teal);
-    color: white;
-    padding: 0.5rem 1.25rem;
+    color: #FFFFFF;
+    padding: 0.5rem 1.2rem;
     border-radius: 50px;
     text-decoration: none;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: background 0.2s, transform 0.2s;
     white-space: nowrap;
+    flex-shrink: 0;
   }
   .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
-  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-  .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.3s; }
+
+  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; flex-shrink: 0; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.9); border-radius: 2px; transition: all 0.3s; }
 
   /* ====== HERO ====== */
   #hero {
@@ -962,7 +969,7 @@
             <div class="stat-label">Tous niveaux collège</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num">12€</div>
+            <div class="stat-num">17€</div>
             <div class="stat-label">Par heure de cours</div>
           </div>
         </div>
@@ -1050,7 +1057,7 @@
       <div class="tarif-card reveal">
         <div class="tarif-icon">📖</div>
         <div class="tarif-name">Cours à l'heure</div>
-        <div class="tarif-price">12€</div>
+        <div class="tarif-price">17€</div>
         <div class="tarif-unit">par heure</div>
         <div class="tarif-desc">Idéal pour démarrer, tester la méthode ou travailler sur un point précis.</div>
       </div>
@@ -1058,8 +1065,8 @@
         <div class="tarif-tag">⭐ Meilleure valeur</div>
         <div class="tarif-icon">📦</div>
         <div class="tarif-name">Pack 10 heures</div>
-        <div class="tarif-price">100€</div>
-        <div class="tarif-unit">soit 10 €/h · économisez 20 €</div>
+        <div class="tarif-price">170€</div>
+        <div class="tarif-unit">soit 17 €/h · économisez 30 €</div>
         <div class="tarif-desc">Le bon rythme pour une remise à niveau solide ou une préparation complète au Brevet.</div>
       </div>
       <div class="tarif-card reveal">
@@ -1320,8 +1327,8 @@
       <h3>Article 3 — Prestations proposées</h3>
       <table class="legal-table">
         <tr><th>Prestation</th><th>Description</th><th>Tarif</th></tr>
-        <tr><td>Cours individuel</td><td>Séance d'une heure, à domicile (Montauban) ou en visioconférence</td><td>12 € / heure</td></tr>
-        <tr><td>Pack 10 heures</td><td>10 heures de cours à utiliser librement sur la période convenue</td><td>100 € (soit 10 €/h)</td></tr>
+        <tr><td>Cours individuel</td><td>Séance d'une heure, à domicile (Montauban) ou en visioconférence</td><td>17 € / heure</td></tr>
+        <tr><td>Pack 10 heures</td><td>10 heures de cours à utiliser librement sur la période convenue</td><td>170 € (soit 17 €/h)</td></tr>
         <tr><td>Révision intensive</td><td>Séance de 2 heures dédiée à un chapitre ciblé</td><td>Sur devis</td></tr>
         <tr><td>Premier échange</td><td>Entretien de 15 à 20 minutes d'évaluation des besoins</td><td>Gratuit — sans engagement</td></tr>
       </table>
