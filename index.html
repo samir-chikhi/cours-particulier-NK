@@ -221,56 +221,76 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(250,247,242,0.92);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
+    background: rgba(26,39,68,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    height: 68px;
     transition: box-shadow 0.3s;
   }
-  nav.scrolled { box-shadow: var(--shadow); }
+  nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.25); }
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.75rem;
     text-decoration: none;
-    line-height: 1.2;
-  }
-  .nav-logo-icon {
-    width: 36px; height: 36px;
-    background: var(--navy);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .nav-logo-icon svg { width: 20px; height: 20px; }
-  .nav-logo-text { display: flex; flex-direction: column; }
-  .nav-logo-name { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--navy); }
-  .nav-logo-sub { font-size: 0.65rem; font-family: 'DM Sans', sans-serif; color: var(--teal); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--teal); }
+  .nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+  }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .nav-logo-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.01em;
+  }
+  .nav-logo-sub {
+    font-size: 0.62rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--teal-light);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .nav-links a:hover { color: white; }
   .nav-cta {
-    background: var(--navy);
+    background: var(--teal);
     color: white;
     padding: 0.5rem 1.25rem;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-weight: 500;
     transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
   }
-  .nav-cta:hover { background: var(--navy-light); transform: translateY(-1px); }
+  .nav-cta:hover { background: var(--teal-light); transform: translateY(-1px); }
   .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: all 0.3s; }
 
   /* ====== HERO ====== */
   #hero {
     min-height: 100vh;
-    padding: 100px 2rem 4rem;
+    padding: 108px 2rem 4rem;
     display: flex;
     align-items: center;
     background: var(--warm-white);
@@ -756,7 +776,13 @@
 
   /* ====== FOOTER ====== */
   /* ====== SECTIONS LÉGALES ====== */
-  #mentions-legales, #cgv { background: var(--cream); }
+  #mentions-legales, #cgv {
+    background: var(--warm-white);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  #mentions-legales .section-label,
+  #cgv .section-label { display: none; }
   .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
   .legal-block { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
   .legal-block h3 { font-size: 0.85rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
@@ -775,13 +801,42 @@
   .legal-table td { padding: 0.5rem 0.75rem; border: 1px solid var(--border); color: var(--text); vertical-align: top; }
 
   footer {
-    background: #10192E;
-    padding: 2rem;
-    text-align: center;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.3);
+    background: #0D1628;
+    padding: 2rem 2.5rem 1.5rem;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
+  .footer-logo { width: 38px; height: 38px; border-radius: 9px; object-fit: cover; }
+  .footer-brand-name { font-weight: 600; color: white; font-size: 0.95rem; }
+  .footer-brand-sub { font-size: 0.72rem; color: var(--teal-light); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 1px; }
+  .footer-contact { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-contact a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+  .footer-contact a:hover { color: white; }
+  .footer-legal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+  }
+  .footer-legal-links { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+  .footer-legal-links a { color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-legal-links a:hover { color: rgba(255,255,255,0.6); }
 
   /* ====== ANIMATIONS ====== */
   @keyframes fadeUp {
@@ -811,17 +866,18 @@
     .nav-mobile {
       display: none;
       position: fixed;
-      top: 64px; left: 0; right: 0;
-      background: var(--cream);
-      border-bottom: 1px solid var(--border);
+      top: 68px; left: 0; right: 0;
+      background: rgba(26,39,68,0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 1.5rem;
       flex-direction: column;
       gap: 1.25rem;
       z-index: 99;
     }
     .nav-mobile.open { display: flex; }
-    .nav-mobile a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 1rem; }
-    .nav-mobile .btn-primary { text-align: center; }
+    .nav-mobile a { text-decoration: none; color: rgba(255,255,255,0.8); font-weight: 400; font-size: 1rem; }
+    .nav-mobile a:hover { color: white; }
+    .nav-mobile .btn-primary { text-align: center; background: var(--teal); }
   }
   @media (max-width: 480px) {
     .steps { grid-template-columns: 1fr; }
@@ -835,12 +891,8 @@
 
 <!-- NAV -->
 <nav id="navbar">
-<a href="#hero" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 4h12L10 12l8 8H6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
+  <a href="#hero" class="nav-logo" aria-label="Studio Maths - Accueil">
+    <img src="logo-studio-maths-icone.png" alt="Logo Studio Maths" width="40" height="40">
     <div class="nav-logo-text">
       <span class="nav-logo-name">Studio Maths</span>
       <span class="nav-logo-sub">Cours de maths · Montauban</span>
@@ -852,23 +904,21 @@
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#mentions-legales">Mentions légales</a></li>
-    <li><a href="#cgv">CGV</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://wa.me/33743567129" class="nav-cta" target="_blank">📞 Prendre contact</a>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <a href="https://wa.me/33743567129" class="nav-cta" target="_blank" rel="noopener">💬 Prendre contact</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </div>
 </nav>
-<nav class="nav-mobile" id="nav-mobile">
+<nav class="nav-mobile" id="nav-mobile" aria-label="Menu mobile">
   <a href="#pour-qui" onclick="toggleMenu()">Pour qui ?</a>
   <a href="#methode" onclick="toggleMenu()">Méthode</a>
   <a href="#tarifs" onclick="toggleMenu()">Tarifs</a>
   <a href="#apropos" onclick="toggleMenu()">À propos</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="#mentions-legales" onclick="toggleMenu()">Mentions légales</a>
-  <a href="#cgv" onclick="toggleMenu()">CGV</a>
-  <a href="#contact" class="btn-primary" onclick="toggleMenu()">📞 Prendre contact</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#contact" class="btn-primary" onclick="toggleMenu()">💬 Prendre contact</a>
 </nav>
 
 <!-- HERO -->
@@ -1346,19 +1396,28 @@
 </section>
 
 <footer>
-  <p>© 2026 Studio Maths — Cours particuliers de maths · Collège · Brevet · Montauban (82000)</p>
-  <p style="margin-top:0.4rem;">
-    <a href="tel:0651509718" style="color:inherit">📞 06 51 50 97 18</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:contact@studiomaths.fr" style="color:inherit">✉️ contact@studiomaths.fr</a>
-    &nbsp;·&nbsp;
-    <a href="https://wa.me/33743567129" style="color:inherit" target="_blank">💬 WhatsApp</a>
-    &nbsp;·&nbsp;
-    <a href="#mentions-legales" style="color:inherit">Mentions légales</a>
-    &nbsp;·&nbsp;
-    <a href="#cgv" style="color:inherit">CGV</a>
-  </p>
-  <p style="margin-top:0.3rem; font-size:0.7rem; opacity:0.5;">CCFA – Chikhi Conseil Formation Audit · SASU · SIRET 943 861 989 00011 · NDA 76820142382 · 12 rue du Génie, 82000 Montauban</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-studio-maths-icone.png" alt="Logo Studio Maths" class="footer-logo">
+      <div>
+        <div class="footer-brand-name">Studio Maths</div>
+        <div class="footer-brand-sub">Cours de maths · Collège · Montauban</div>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <a href="tel:0743567129">📞 07 43 56 71 29</a>
+      <a href="mailto:contact@studiomaths.fr">✉️ contact@studiomaths.fr</a>
+      <a href="https://wa.me/33743567129" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <span>© 2026 Studio Maths — CCFA · SASU · SIRET 943 861 989 00011 · NDA 76820142382 · 12 rue du Génie, 82000 Montauban</span>
+    <span class="footer-legal-links">
+      <a href="#mentions-legales">Mentions légales</a>
+      <span>·</span>
+      <a href="#cgv">CGV</a>
+    </span>
+  </div>
 </footer>
 
 <script>
