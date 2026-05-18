@@ -44,7 +44,7 @@
       "description": "Cours particuliers de mathématiques pour enfants et adolescents du collège à Montauban. Préparation au Brevet, révisions, remise à niveau, stages intensifs. Cours à domicile et en ligne.",
       "url": "https://www.studiomaths.fr/",
       "telephone": "+33743567129",
-      "email": "kabouchen@yahoo.fr",
+      "email": "contact@studiomaths.fr",
       "image": "https://www.studiomaths.fr/logo-studio-maths-horizontal.jpg",
       "logo": "https://www.studiomaths.fr/logo-studio-maths-icone.png",
       "priceRange": "€",
@@ -755,6 +755,25 @@
   .contact-gratuit p { color: rgba(255,255,255,0.55); font-size: 0.875rem; }
 
   /* ====== FOOTER ====== */
+  /* ====== SECTIONS LÉGALES ====== */
+  #mentions-legales, #cgv { background: var(--cream); }
+  .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .legal-block { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+  .legal-block h3 { font-size: 0.85rem; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+  .legal-block p, .legal-block li { font-size: 0.875rem; color: var(--text); line-height: 1.7; }
+  .legal-block ul { padding-left: 1.1rem; margin-top: 0.25rem; }
+  .legal-block li { margin-bottom: 0.25rem; }
+  .legal-intro { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7; }
+  .legal-full { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 2rem; margin-top: 1.5rem; }
+  .legal-full h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin: 1.5rem 0 0.5rem; }
+  .legal-full h3:first-child { margin-top: 0; }
+  .legal-full p, .legal-full li { font-size: 0.875rem; color: var(--text); line-height: 1.75; }
+  .legal-full ul, .legal-full ol { padding-left: 1.25rem; margin: 0.5rem 0; }
+  .legal-full li { margin-bottom: 0.3rem; }
+  .legal-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.85rem; }
+  .legal-table th { background: var(--cream); padding: 0.5rem 0.75rem; text-align: left; font-weight: 600; color: var(--navy); border: 1px solid var(--border); }
+  .legal-table td { padding: 0.5rem 0.75rem; border: 1px solid var(--border); color: var(--text); vertical-align: top; }
+
   footer {
     background: #10192E;
     padding: 2rem;
@@ -833,6 +852,8 @@
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#mentions-legales">Mentions légales</a></li>
+    <li><a href="#cgv">CGV</a></li>
   </ul>
   <a href="https://wa.me/33743567129" class="nav-cta" target="_blank">📞 Prendre contact</a>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -845,6 +866,8 @@
   <a href="#tarifs" onclick="toggleMenu()">Tarifs</a>
   <a href="#apropos" onclick="toggleMenu()">À propos</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#mentions-legales" onclick="toggleMenu()">Mentions légales</a>
+  <a href="#cgv" onclick="toggleMenu()">CGV</a>
   <a href="#contact" class="btn-primary" onclick="toggleMenu()">📞 Prendre contact</a>
 </nav>
 
@@ -1128,11 +1151,11 @@
         <div class="contact-card-arrow">→</div>
       </a>
 
-      <a href="mailto:kabouchen@yahoo.fr?subject=Demande%20cours%20de%20maths%20-%20Studio%20Maths%20Montauban&body=Bonjour%20Nawel%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20les%20cours%20de%20maths%20pour%20mon%20enfant.%0A%0APrenom%20du%20parent%20:%0ANom%20du%20parent%20:%0AClasse%20de%20l%27enfant%20:%0AObjectif%20(brevet%2C%20remise%20a%20niveau%2C%20autre)%20:%0ADisponibilites%20:%0A%0AMerci%20!" class="contact-card" aria-label="Envoyer un email à Studio Maths">
+      <a href="mailto:contact@studiomaths.fr?subject=Demande%20cours%20de%20maths%20-%20Studio%20Maths%20Montauban&body=Bonjour%20Nawel%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20les%20cours%20de%20maths%20pour%20mon%20enfant.%0A%0APrenom%20du%20parent%20:%0ANom%20du%20parent%20:%0AClasse%20de%20l%27enfant%20:%0AObjectif%20(brevet%2C%20remise%20a%20niveau%2C%20autre)%20:%0ADisponibilites%20:%0A%0AMerci%20!" class="contact-card" aria-label="Envoyer un email à Studio Maths">
         <div class="contact-card-icon">✉️</div>
         <div class="contact-card-body">
           <strong>Email</strong>
-          <span>kabouchen@yahoo.fr</span>
+          <span>contact@studiomaths.fr</span>
           <small>Réponse sous 24 h</small>
         </div>
         <div class="contact-card-arrow">→</div>
@@ -1159,15 +1182,183 @@
   </div>
 </section>
 
+<!-- MENTIONS LÉGALES -->
+<section id="mentions-legales">
+  <div class="section-inner">
+    <div class="section-label reveal">Informations légales</div>
+    <h2 class="reveal">Mentions légales</h2>
+    <p class="legal-intro reveal">Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique (LCEN), les présentes mentions légales définissent les conditions d'utilisation du site <strong>www.studiomaths.fr</strong>.</p>
+
+    <div class="legal-grid">
+
+      <div class="legal-block reveal">
+        <h3>Éditeur du site</h3>
+        <p><strong>CCFA – Chikhi Conseil Formation Audit</strong><br>
+        Société par Actions Simplifiée Unipersonnelle (SASU)<br>
+        Capital social : 1 000 €<br>
+        SIRET : 943 861 989 00011<br>
+        Code NAF / APE : 7022Z<br>
+        N° de déclaration d'activité (NDA) : 76820142382<br>
+        (Enregistrement auprès du Préfet de région Occitanie)<br>
+        Siège social : 12 rue du Génie — 82000 Montauban<br>
+        Téléphone : 06 51 50 97 18<br>
+        Email : <a href="mailto:contact@studiomaths.fr">contact@studiomaths.fr</a><br>
+        Représentant légal : Samir Chikhi, Gérant</p>
+      </div>
+
+      <div class="legal-block reveal">
+        <h3>Hébergement</h3>
+        <p><strong>GitHub Pages</strong><br>
+        GitHub, Inc.<br>
+        88 Colin P. Kelly Jr. Street<br>
+        San Francisco, CA 94107 — États-Unis<br>
+        <a href="https://pages.github.com" target="_blank" rel="noopener">pages.github.com</a></p>
+        <br>
+        <p><strong>Nom de domaine</strong><br>
+        OVHcloud SAS<br>
+        2 rue Kellermann — 59100 Roubaix<br>
+        RCS Roubaix-Tourcoing : 424 761 419</p>
+      </div>
+
+      <div class="legal-block reveal">
+        <h3>Propriété intellectuelle</h3>
+        <p>L'ensemble du contenu de ce site (textes, visuels, logo, structure) est la propriété exclusive de CCFA – Chikhi Conseil Formation Audit et est protégé par les lois françaises et internationales relatives au droit d'auteur et à la propriété intellectuelle.</p>
+        <p style="margin-top:0.5rem">Toute reproduction, représentation, modification ou exploitation, totale ou partielle, est strictement interdite sans autorisation écrite préalable.</p>
+      </div>
+
+      <div class="legal-block reveal">
+        <h3>Données personnelles (RGPD)</h3>
+        <p>Les données collectées via ce site (formulaire de contact, email, téléphone) sont traitées par CCFA dans le seul but de répondre aux demandes d'information et de gestion des cours.</p>
+        <ul>
+          <li>Responsable du traitement : Samir Chikhi (CCFA)</li>
+          <li>Finalité : gestion de la relation client et pédagogique</li>
+          <li>Durée de conservation : 3 ans à compter du dernier contact</li>
+          <li>Aucun transfert vers des tiers ni vers des pays hors UE</li>
+        </ul>
+        <p style="margin-top:0.5rem">Conformément au RGPD (Règlement UE 2016/679) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. Pour l'exercer : <a href="mailto:contact@studiomaths.fr">contact@studiomaths.fr</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+      </div>
+
+      <div class="legal-block reveal">
+        <h3>Cookies</h3>
+        <p>Ce site n'utilise pas de cookies de traçage ni de cookies publicitaires. Aucun outil d'analyse statistique tiers n'est intégré. La navigation sur ce site ne génère donc aucune collecte automatique de données personnelles.</p>
+      </div>
+
+      <div class="legal-block reveal">
+        <h3>Responsabilité</h3>
+        <p>CCFA s'efforce de maintenir les informations publiées sur ce site à jour et exactes. Toutefois, la société ne saurait être tenue responsable des erreurs, omissions ou des résultats obtenus par l'utilisation de ces informations. L'accès au site et son utilisation sont sous la seule responsabilité de l'utilisateur.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CGV -->
+<section id="cgv">
+  <div class="section-inner">
+    <div class="section-label reveal">Cadre contractuel</div>
+    <h2 class="reveal">Conditions générales de vente</h2>
+    <p class="legal-intro reveal">Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre <strong>CCFA – Chikhi Conseil Formation Audit</strong> (ci-après "le Prestataire") et toute personne physique ou morale (ci-après "le Client") souhaitant bénéficier des services de cours particuliers de mathématiques proposés sous la marque <strong>Studio Maths</strong>.</p>
+
+    <div class="legal-full reveal">
+
+      <h3>Article 1 — Identification du prestataire</h3>
+      <p>CCFA – Chikhi Conseil Formation Audit, SASU au capital de 1 000 €, immatriculée sous le numéro SIRET 943 861 989 00011, dont le siège social est situé 12 rue du Génie, 82000 Montauban. Organisme de formation enregistré sous le numéro de déclaration d'activité (NDA) 76820142382 auprès du Préfet de région Occitanie. Représentée par Samir Chikhi, Gérant.</p>
+
+      <h3>Article 2 — Objet et champ d'application</h3>
+      <p>Les présentes CGV s'appliquent à toutes les prestations de cours particuliers et de soutien scolaire en mathématiques dispensées par le Prestataire aux élèves de collège (6e à 3e), y compris la préparation au Brevet des collèges, les remises à niveau et les stages intensifs. Elles prévalent sur tout autre document du Client.</p>
+
+      <h3>Article 3 — Prestations proposées</h3>
+      <table class="legal-table">
+        <tr><th>Prestation</th><th>Description</th><th>Tarif</th></tr>
+        <tr><td>Cours individuel</td><td>Séance d'une heure, à domicile (Montauban) ou en visioconférence</td><td>12 € / heure</td></tr>
+        <tr><td>Pack 10 heures</td><td>10 heures de cours à utiliser librement sur la période convenue</td><td>100 € (soit 10 €/h)</td></tr>
+        <tr><td>Révision intensive</td><td>Séance de 2 heures dédiée à un chapitre ciblé</td><td>Sur devis</td></tr>
+        <tr><td>Premier échange</td><td>Entretien de 15 à 20 minutes d'évaluation des besoins</td><td>Gratuit — sans engagement</td></tr>
+      </table>
+      <p>Le Prestataire se réserve le droit de modifier ses tarifs à tout moment. Les tarifs applicables sont ceux en vigueur au moment de la signature de la convention ou de l'accord de commande.</p>
+
+      <h3>Article 4 — Formation du contrat</h3>
+      <p>Le contrat est formé dès l'acceptation expresse des présentes CGV par le Client, matérialisée par :</p>
+      <ul>
+        <li>La signature d'une convention de formation individuelle (pour les prestations relevant de la formation professionnelle) ;</li>
+        <li>Ou tout accord écrit (email, message) confirmant la commande et les conditions tarifaires.</li>
+      </ul>
+      <p>Le premier échange gratuit ne constitue pas un engagement contractuel. La relation contractuelle débute à compter du premier cours facturé.</p>
+
+      <h3>Article 5 — Modalités de paiement</h3>
+      <p>Le règlement s'effectue :</p>
+      <ul>
+        <li>Par virement bancaire sur le compte du Prestataire (RIB communiqué sur facture) ;</li>
+        <li>Par chèque libellé à l'ordre de CCFA ;</li>
+        <li>En espèces, dans la limite légale en vigueur (1 000 € entre particuliers).</li>
+      </ul>
+      <p>Pour les cours à l'heure : paiement à l'issue de chaque séance ou en fin de mois selon accord. Pour le pack 10 heures : paiement intégral à la commande. Tout retard de paiement au-delà de 30 jours entraîne l'application de pénalités au taux légal en vigueur, ainsi qu'une indemnité forfaitaire de recouvrement de 40 € (art. L.441-10 du Code de commerce).</p>
+
+      <h3>Article 6 — Droit de rétractation</h3>
+      <p>Conformément à l'article L.221-18 du Code de la consommation, le Client particulier bénéficie d'un délai de rétractation de <strong>14 jours calendaires</strong> à compter de la conclusion du contrat, sans avoir à motiver sa décision ni à supporter de pénalités, sous réserve que les cours n'aient pas encore débuté.</p>
+      <p>Pour exercer ce droit, le Client doit notifier sa décision par email à <a href="mailto:contact@studiomaths.fr">contact@studiomaths.fr</a> ou par courrier à : CCFA, 12 rue du Génie, 82000 Montauban, avant l'expiration du délai.</p>
+      <p>Si le Client a expressément demandé que la prestation commence avant la fin du délai de rétractation, il devra payer au Prestataire un montant proportionnel aux services fournis jusqu'à la communication de sa décision de se rétracter.</p>
+
+      <h3>Article 7 — Annulation et report de séance</h3>
+      <ul>
+        <li><strong>Annulation par le Client :</strong> toute annulation doit être notifiée au moins <strong>48 heures</strong> avant la séance prévue. En deçà de ce délai, la séance est due et facturée sauf cas de force majeure (maladie justifiée par certificat médical, urgence familiale).</li>
+        <li><strong>Annulation par le Prestataire :</strong> en cas d'empêchement, le Prestataire s'engage à prévenir le Client dans les meilleurs délais et à proposer une date de remplacement. Aucune facturation n'est appliquée pour les séances annulées par le Prestataire.</li>
+        <li><strong>Report :</strong> les séances peuvent être reportées d'un commun accord dans un délai de 30 jours.</li>
+      </ul>
+
+      <h3>Article 8 — Obligations des parties</h3>
+      <p><strong>Obligations du Prestataire :</strong></p>
+      <ul>
+        <li>Dispenser les cours avec soin, compétence et ponctualité ;</li>
+        <li>Adapter la pédagogie au niveau et aux besoins de l'élève ;</li>
+        <li>Maintenir la confidentialité des informations communiquées par le Client ;</li>
+        <li>Fournir une facture ou une attestation de présence à la demande du Client.</li>
+      </ul>
+      <p><strong>Obligations du Client :</strong></p>
+      <ul>
+        <li>Assurer un environnement de travail calme et adapté pour les cours à domicile ;</li>
+        <li>Veiller à ce que l'élève soit présent, disponible et muni de son matériel scolaire ;</li>
+        <li>Régler les sommes dues dans les délais convenus ;</li>
+        <li>Informer le Prestataire de toute difficulté particulière susceptible d'influencer le déroulement des cours.</li>
+      </ul>
+
+      <h3>Article 9 — Responsabilité</h3>
+      <p>Le Prestataire est soumis à une obligation de moyens et non de résultats. Les progrès de l'élève dépendent de facteurs extérieurs (assiduité, travail personnel, contexte scolaire) sur lesquels le Prestataire n'a pas de maîtrise totale. En conséquence, aucun résultat scolaire spécifique ne peut être garanti. La responsabilité du Prestataire ne saurait être engagée au-delà du montant des sommes effectivement versées par le Client.</p>
+
+      <h3>Article 10 — Protection des données personnelles (RGPD)</h3>
+      <p>Les données personnelles collectées (nom, prénom, coordonnées, informations sur l'élève) sont traitées par CCFA en qualité de responsable de traitement, aux fins de gestion des cours et de la relation client. Conformément au RGPD et à la loi Informatique et Libertés, le Client dispose d'un droit d'accès, de rectification, d'opposition et d'effacement de ses données, exerceable à : <a href="mailto:contact@studiomaths.fr">contact@studiomaths.fr</a>. Les données sont conservées 3 ans à compter du dernier cours.</p>
+
+      <h3>Article 11 — Convention de formation professionnelle</h3>
+      <p>Lorsque la prestation est financée dans le cadre de la formation professionnelle continue (CPF, OPCO, plan de formation d'entreprise), une convention de formation est établie conformément aux articles L.6353-1 et suivants du Code du travail. Dans ce cadre, le Prestataire fournit une convention, une convocation, une feuille d'émargement et une attestation de fin de formation.</p>
+
+      <h3>Article 12 — Propriété intellectuelle</h3>
+      <p>Tous les supports pédagogiques, fiches de révision, exercices et documents transmis par le Prestataire dans le cadre des cours restent la propriété exclusive de CCFA et ne peuvent être reproduits, diffusés ou commercialisés sans autorisation écrite préalable.</p>
+
+      <h3>Article 13 — Loi applicable et juridiction compétente</h3>
+      <p>Les présentes CGV sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable. À défaut, et conformément à l'article L.616-1 du Code de la consommation, le Client particulier peut recourir gratuitement au service de médiation de la consommation compétent. À défaut de résolution amiable, les tribunaux compétents seront ceux du ressort du siège social de CCFA (Tribunal de Montauban), sauf dispositions légales contraires applicables aux consommateurs.</p>
+
+      <h3>Article 14 — Mise à jour des CGV</h3>
+      <p>Les présentes CGV peuvent être modifiées à tout moment par le Prestataire. La version applicable est celle en vigueur à la date de la commande. La version actualisée est disponible en permanence sur le site <a href="https://www.studiomaths.fr">www.studiomaths.fr</a>.</p>
+      <p style="margin-top:1rem; color: var(--text-muted); font-size:0.8rem; font-style:italic;">Dernière mise à jour : mai 2026 — CCFA, SASU au capital de 1 000 €, SIRET 943 861 989 00011</p>
+
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>© 2026 Studio Maths — Cours particuliers de maths · Collège · Brevet · Montauban (82000)</p>
   <p style="margin-top:0.4rem;">
-    <a href="tel:0743567129" style="color:inherit">📞 07 43 56 71 29</a>
+    <a href="tel:0651509718" style="color:inherit">📞 06 51 50 97 18</a>
     &nbsp;·&nbsp;
-    <a href="mailto:kabouchen@yahoo.fr" style="color:inherit">✉️ kabouchen@yahoo.fr</a>
+    <a href="mailto:contact@studiomaths.fr" style="color:inherit">✉️ contact@studiomaths.fr</a>
     &nbsp;·&nbsp;
     <a href="https://wa.me/33743567129" style="color:inherit" target="_blank">💬 WhatsApp</a>
+    &nbsp;·&nbsp;
+    <a href="#mentions-legales" style="color:inherit">Mentions légales</a>
+    &nbsp;·&nbsp;
+    <a href="#cgv" style="color:inherit">CGV</a>
   </p>
+  <p style="margin-top:0.3rem; font-size:0.7rem; opacity:0.5;">CCFA – Chikhi Conseil Formation Audit · SASU · SIRET 943 861 989 00011 · NDA 76820142382 · 12 rue du Génie, 82000 Montauban</p>
 </footer>
 
 <script>
