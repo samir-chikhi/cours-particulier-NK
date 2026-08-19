@@ -823,8 +823,11 @@
     .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
   }
 </style>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:#111;color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font:600 15px/1.2 system-ui,sans-serif;text-decoration:none}.skip-link:focus{left:0}:focus-visible{outline:3px solid #2563eb;outline-offset:2px}</style>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -889,7 +892,7 @@
         <div class="floating-pill">✨ 1er échange gratuit</div>
         <div class="hero-card-header">
           <div class="avatar">
-            <img src="logo-studio-maths-icone.png" alt="Studio Maths" width="38" height="38">
+            <img src="logo-studio-maths-icone.png" alt="Studio Maths" width="38" height="38" fetchpriority="high">
           </div>
           <div class="avatar-info">
             <div class="avatar-name">Studio Maths</div>
@@ -1025,7 +1028,7 @@
     <div class="apropos-inner">
       <div class="apropos-visual reveal">
         <div class="apropos-logo-wrap">
-          <img src="logo-studio-maths-icone.png" alt="Studio Maths" width="64" height="64">
+          <img src="logo-studio-maths-icone.png" alt="Studio Maths" width="64" height="64" loading="lazy" decoding="async">
         </div>
         <div class="apropos-brand-name">Studio Maths</div>
         <div class="apropos-brand-sub">Cours de maths · Collège</div>
